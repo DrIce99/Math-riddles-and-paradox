@@ -1,13 +1,13 @@
 # MATH RIDDLES & PARADOXES
 
-## ENG
-
 > [!NOTE]
 > 🇮🇹 **Versione Italiana Disponibile**: [Leggi la versione in italiano](./README.md).
 
 A small personal repository where I try to uncover the logical meanings behind:
 - apparent random sequences
 - seemingly magical optimizations
+
+## ENG
 
 ___
 
@@ -62,6 +62,8 @@ The birthday paradox demonstrates how counterintuitive probability can be when a
 
 By running the simulation, you will see how the number of "pairs" grows exponentially as the number of participants increases. The graphic visualization transforms the abstract data into a color-coded map where "birthday clusters" become immediately visible, making it clear why the probability of a collision is much higher than it seems.
 
+<img width="662" height="842" alt="image" src="https://github.com/user-attachments/assets/89a77c51-3ee2-4717-a9ab-a0d6bfbd8645" />
+
 ___
 
 #### *The Collatz Conjecture*
@@ -83,6 +85,10 @@ The Collatz Conjecture, also known as the $3n + 1$ problem, is one of the most f
 > 3. Global statistical analysis that compares the number of steps required to reach the cycle and tracks the discovery of new nodes in the graph.
 
 Running the simulation, you'll observe how numbers naturally converge toward the central cycle. The structure expands like an inverted binary tree, where each number acts as a "root" for its predecessors, revealing a deep and geometrically elegant order behind what initially appears to be chaotic computation.
+
+<img width="1185" height="1011" alt="image" src="https://github.com/user-attachments/assets/c2f4f522-98f3-4434-928e-ffa5d205c691" />
+
+<img width="1370" height="686" alt="image" src="https://github.com/user-attachments/assets/c0009b16-3bc8-4bfd-ad11-9038ea0191e8" />
 
 ___
 
@@ -107,6 +113,10 @@ Take any 4-digit number (as long as not all digits are the same). Sort its digit
 > 4. The "Range Analysis" section calculates and plots the required steps and the maximum peak reached for any given range of numbers.
 
 Running the program and entering different starting numbers, you'll notice that all paths inevitably converge towards the central red node (6174). The statistical analysis also reveals that most numbers require between 3 and 5 steps, creating a fascinating "waterfall" pattern in the maximum peaks graph. This visually demonstrates how a seemingly simple arithmetic operation generates a highly ordered and deterministic mathematical structure.
+
+<img width="1051" height="983" alt="Screenshot 2026-06-18 153636" src="https://github.com/user-attachments/assets/bf92409e-3a50-4f0f-9dc9-f5dd97f764de" />
+
+<img width="1367" height="684" alt="image" src="https://github.com/user-attachments/assets/7a5df582-0b8c-48c8-8704-9a70aa5df28a" />
 
 ___
 
