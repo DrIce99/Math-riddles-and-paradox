@@ -85,6 +85,32 @@ The Monty Hall paradox is a famous probability puzzle based on the American tele
 By running the simulation, you will notice that the probability of winning by switching is not 50%, but roughly 66.6% (2/3)!
 
 This happens because the player's initial choice has a 1 in 3 chance of being correct and a 2 in 3 chance of being wrong (meaning they chose a goat). If the player picked a goat initially, the host is forced to reveal the other remaining goat. Consequently, the last remaining door will *always* contain the car. By always switching doors, every initial mistake is turned into a victory, effectively doubling the chances of success.
+
+___
+
+#### *Penney's Game*
+
+Two players compete by flipping a fair coin. Each player chooses a sequence of three outcomes (Heads or Tails). The coin is flipped repeatedly until one of the two sequences appears.
+
+> [!IMPORTANT]
+> 1. Player 1 chooses a sequence of 3 flips (e.g., H-H-H).
+> 2. Player 2, knowing Player 1's choice, selects a different sequence of 3 flips (e.g., T-H-H).
+> 3. The coin is flipped repeatedly. The player whose sequence appears first in the series of flips wins the game.
+
+> [!NOTE]
+> Since the coin is fair and the sequences have the same length, intuition suggests the game is perfectly balanced. One would expect each player to have exactly a 50% chance of winning.
+
+> [!TIP]
+> The program implements the optimal strategy for Player 2 (based on Conway's algorithm):
+> 1. Player 1 chooses a sequence A-B-C.
+> 2. Player 2 chooses as the first element the opposite of Player 1's second element (not-B).
+> 3. As the second and third elements, Player 2 copies the first two elements chosen by Player 1 (A-B).
+> 4. Player 2's final sequence will therefore be: not-B - A - B.
+
+Running the simulation, you'll notice that the game is not balanced at all: Player 2 wins about 66% - 75% of the time, depending on Player 1's initial choice!
+
+This happens because Penney's Game is a *non-transitive* game. Player 2's strategy is designed to create an unfavorable mathematical "overlap." For example, if Player 1 chooses H-H-H and Player 2 chooses T-H-H, the only way Player 1 can win is if the first three coins all come up Heads. If even a single Tail appears early on, the H-H-H sequence is "broken," but the T-H-H sequence is still alive and will prevail as soon as two consecutive Heads appear. Player 2 always has a guaranteed mathematical advantage, regardless of what Player 1 chooses.
+
 ___
 
 #### *Distance Between Twin Primes*

@@ -110,6 +110,33 @@ Questo accade perché la scelta iniziale del giocatore ha 1 probabilità su 3 di
 
 ___
 
+#### *Il gioco di Penney*
+
+Due giocatori si sfidano lanciando una moneta equa. Ciascun giocatore sceglie una sequenza di tre risultati (Testa o Croce). La moneta viene lanciata ripetutamente fino a quando una delle due sequenze non appare.
+
+> [!IMPORTANT]
+> 1. Il Giocatore 1 sceglie una sequenza di 3 lanci (es. H-H-H).
+> 2. Il Giocatore 2, conoscendo la scelta del primo, sceglie una sequenza diversa di 3 lanci (es. T-H-H).
+> 3. Si lancia la moneta ripetutamente. Il giocatore la cui sequenza appare per prima nella serie di lanci vince la partita.
+
+> [!NOTE]
+> Poiché la moneta è equa e le sequenze hanno la stessa lunghezza, l'intuito suggerisce che il gioco sia perfettamente bilanciato. Ci si aspetterebbe che ogni giocatore abbia esattamente il 50% di probabilità di vincere.
+
+> [!TIP]
+> Il programma implementa la strategia ottimale per il Giocatore 2 (basata sull'algoritmo di Conway):
+> 1. Il Giocatore 1 sceglie una sequenza A-B-C.
+> 2. Il Giocatore 2 sceglie come primo elemento l'opposto del secondo elemento di P1 (non-B).
+> 3. Come secondo e terzo elemento, il Giocatore 2 copia i primi due elementi scelti dal Giocatore 1 (A-B).
+> 4. La sequenza finale del Giocatore 2 sarà quindi: non-B - A - B.
+
+Eseguendo la simulazione, noterai che il gioco non è affatto bilanciato: il Giocatore 2 vince circa il 66% - 75% delle volte, a seconda della scelta iniziale del Giocatore 1!
+
+Questo accade perché il Gioco di Penney è un gioco *non transitivo*. La strategia del Giocatore 2 è progettata per creare una "sovrapposizione" matematica sfavorevole. Ad esempio, se il Giocatore 1 sceglie H-H-H e il Giocatore 2 sceglie T-H-H, l'unico modo in cui il Giocatore 1 può vincere è che le prime tre monete escano tutte Teste. Se esce anche una sola Croce all'inizio, la sequenza H-H-H è "rotta", ma la sequenza T-H-H è ancora viva e avrà la meglio non appena usciranno due Teste consecutive. Il Giocatore 2 ha sempre un vantaggio matematico garantito, indipendentemente da cosa scelga il Giocatore 1.
+
+___
+
+___
+
 #### *Distanza tra Primi Gemelli*
 
 I numeri primi gemelli sono coppie di numeri primi che differiscono tra loro di esattamente 2 (come $3$ e $5$, $11$ e $13$). L'analisi si concentra sulla "distanza tra le distanze", ovvero lo spazio che separa la fine di una coppia di gemelli dall'inizio della coppia successiva.
