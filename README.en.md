@@ -33,6 +33,34 @@ There are 100 prisoners numbered from 1 to 100. A guard decides to offer them a 
 By running the simulation, you will notice that the probability of success is not close to zero, but actually over 30%!
 
 This happens because, by following the cycle strategy, each prisoner's success is no longer an independent event: all prisoners share the same fate based on the structure of the cycles present in the random permutation of the boxes. If the permutation contains no cycles longer than 50, then every single prisoner will succeed in finding their number.
+
+___
+
+#### *The Birthday Paradox*
+
+The birthday paradox demonstrates how counterintuitive probability can be when applied to large numbers. It is based on the question: how many people must be in a room for there to be at least a 50% chance that two of them share the same birthday?
+
+> [!IMPORTANT]
+> 1. We assume a 365-day year (ignoring leap years).
+> 2. We assume that every day of the year has an equal probability of being a birthday.
+> 3. The goal is to calculate the probability of a collision (two people sharing a birthday) as the number of people $n$ varies.
+> 
+> 
+
+> [!NOTE]
+> Intuition suggests you would need many people (often thinking of 183, half the year). In reality, the 50% threshold is crossed with just **23 people**.
+
+> [!TIP]
+> The program implements an interactive interface that allows you to explore the paradox in real-time:
+> 1. **Dynamic Slider**: Allows you to change the number of people without restarting the simulation.
+> 2. **Visual Calendar**: A 12-month viewer displays the generated dates, clearly highlighting (via a heatmap) the days where collisions occur.
+> 3. **Statistical Calculation**: Runs thousands of iterations to show the convergence of the probability toward the theoretical result.
+> 
+> 
+
+By running the simulation, you will see how the number of "pairs" grows exponentially as the number of participants increases. The graphic visualization transforms the abstract data into a color-coded map where "birthday clusters" become immediately visible, making it clear why the probability of a collision is much higher than it seems.
+
+
 ___
 
 #### *The Monty Hall Paradox*

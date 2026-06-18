@@ -35,6 +35,31 @@ Ci sono 100 prigionieri numerati da 1 a 100. Una guardia decide di dare loro un'
 Eseguendo la simulazione, noterai che la probabilità di successo non è quasi zero, ma è superiore al 30%!
 
 Questo accade perché, seguendo la strategia dei cicli, il successo di ogni prigioniero non è più un evento indipendente: tutti i prigionieri condividono lo stesso destino basato sulla struttura dei cicli presenti nella permutazione casuale delle scatole. Se la permutazione non contiene cicli più lunghi di 50, allora tutti i prigionieri riusciranno a trovare il proprio numero.
+
+___
+
+#### *Il paradosso del compleanno*
+
+Il paradosso del compleanno dimostra quanto sia controintuitiva la probabilità quando applicata a grandi numeri. Si basa sulla domanda: quante persone devono essere presenti in una stanza affinché ci sia almeno il 50% di probabilità che due di loro festeggino il compleanno lo stesso giorno?
+
+> [!IMPORTANT]
+> 1. Si ipotizza un anno di 365 giorni (senza considerare gli anni bisestili).
+> 2. Si assume che ogni giorno dell'anno abbia la stessa probabilità di nascita.
+> 3. L'obiettivo è calcolare la probabilità di collisione (due persone con lo stesso compleanno) al variare del numero di persone $n$.
+> 
+> 
+
+> [!NOTE]
+> L'istinto suggerisce che servano molte persone (spesso si pensa a 183, metà dell'anno). In realtà, la soglia del 50% viene superata con sole **23 persone**.
+
+> [!TIP]
+> Il programma implementa un'interfaccia interattiva che permette di esplorare il paradosso in tempo reale:
+> 1. **Slider dinamico**: Permette di variare il numero di persone senza riavviare la simulazione.
+> 2. **Calendario visuale**: Un visualizzatore a 12 mesi mostra le date estratte, evidenziando in modo chiaro (tramite una mappa di calore) i giorni in cui cadono le collisioni.
+> 3. **Calcolo statistico**: Esegue migliaia di iterazioni per mostrare la convergenza della probabilità verso il risultato teorico.
+
+Eseguendo la simulazione, vedrai come il numero di "coppie" cresca esponenzialmente all'aumentare dei partecipanti. La visualizzazione grafica trasforma il dato astratto in una mappa colorata dove i "cluster" di compleanni diventano immediatamente visibili, rendendo evidente perché la probabilità di una collisione sia molto più alta di quanto sembri.
+
 ___
 
 #### *Congettura di Collatz*
