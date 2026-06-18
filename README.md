@@ -60,6 +60,8 @@ Il paradosso del compleanno dimostra quanto sia controintuitiva la probabilità 
 
 Eseguendo la simulazione, vedrai come il numero di "coppie" cresca esponenzialmente all'aumentare dei partecipanti. La visualizzazione grafica trasforma il dato astratto in una mappa colorata dove i "cluster" di compleanni diventano immediatamente visibili, rendendo evidente perché la probabilità di una collisione sia molto più alta di quanto sembri.
 
+<img width="662" height="842" alt="image" src="https://github.com/user-attachments/assets/89a77c51-3ee2-4717-a9ab-a0d6bfbd8645" />
+
 ___
 
 #### *Congettura di Collatz*
@@ -81,6 +83,10 @@ La congettura di Collatz, nota anche come il problema $3n + 1$, è uno dei probl
 > 3. Analisi statistica globale che confronta il numero di step necessari per raggiungere il ciclo e la scoperta di nuovi nodi nel grafo.
 
 Eseguendo la simulazione, potrai osservare come i numeri convergano naturalmente verso il ciclo centrale. La struttura si espande come un albero binario inverso, dove ogni numero funge da "radice" per i propri predecessori, rivelando un ordine profondo e geometricamente elegante dietro quello che inizialmente appare come un calcolo caotico.
+
+<img width="1185" height="1011" alt="image" src="https://github.com/user-attachments/assets/c2f4f522-98f3-4434-928e-ffa5d205c691" />
+
+<img width="1370" height="686" alt="image" src="https://github.com/user-attachments/assets/c0009b16-3bc8-4bfd-ad11-9038ea0191e8" />
 
 ___
 
@@ -105,6 +111,10 @@ Prendi un qualsiasi numero di 4 cifre (purché non abbia tutte le cifre uguali).
 > 4. La sezione "Analisi Range" calcola e plotta i passi necessari e il picco massimo raggiunto per qualsiasi intervallo di numeri.
 
 Eseguendo il programma e inserendo diversi numeri di partenza, noterai che tutti i percorsi convergono inevitabilmente verso il nodo rosso centrale (6174). L'analisi statistica rivela inoltre che la maggior parte dei numeri richiede dai 3 ai 5 passi, creando un affascinante pattern a "cascata" nel grafico dei picchi massimi. Questo dimostra visivamente come un'operazione aritmetica apparentemente semplice generi una struttura matematica altamente ordinata e deterministica.
+
+<img width="1051" height="983" alt="Screenshot 2026-06-18 153636" src="https://github.com/user-attachments/assets/bf92409e-3a50-4f0f-9dc9-f5dd97f764de" />
+
+<img width="1367" height="684" alt="image" src="https://github.com/user-attachments/assets/7a5df582-0b8c-48c8-8704-9a70aa5df28a" />
 
 ___
 
@@ -184,4 +194,5 @@ Eseguendo la simulazione su un set di dati sufficientemente ampio, potrai notare
 
 Questo fenomeno riflette le proprietà intrinseche della distribuzione dei numeri primi nella progressione aritmetica: poiché tutti i numeri primi maggiori di 3 devono necessariamente essere della forma $6k \pm 1$, le dinamiche di spaziatura tra le coppie di gemelli risentono fortemente di questa rigidità strutturale di base della teoria dei numeri.
 
+(Guardate solo il log da terminale. Non guardate il grafico, è orrendo.)
 ___
