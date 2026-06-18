@@ -1,3 +1,5 @@
+# MATH RIDDLES & PARADOXES
+
 ## ENG
 
 > [!NOTE]
@@ -60,6 +62,51 @@ The birthday paradox demonstrates how counterintuitive probability can be when a
 
 By running the simulation, you will see how the number of "pairs" grows exponentially as the number of participants increases. The graphic visualization transforms the abstract data into a color-coded map where "birthday clusters" become immediately visible, making it clear why the probability of a collision is much higher than it seems.
 
+___
+
+#### *The Collatz Conjecture*
+
+The Collatz Conjecture, also known as the $3n + 1$ problem, is one of the most famous unsolved problems in mathematics. It applies to any positive integer $n$ and follows a very simple transformation rule:
+
+> [!IMPORTANT]
+> 1. If the number is even, divide it by 2 ($n / 2$).
+> 2. If the number is odd, multiply it by 3 and add 1 ($3n + 1$).
+> 3. Repeat the process with the resulting number.
+
+> [!NOTE]
+> The conjecture states that, regardless of the starting number chosen, the sequence will always eventually reach the cycle $4 \to 2 \to 1$. Despite the simplicity of the rule, no one has yet been able to mathematically prove that this holds true for *every* existing number.
+
+> [!TIP]
+> The program implements a dynamic graph visualizer that allows you to explore the tree-like structure of the conjecture:
+> 1. Planar visualization that prevents branch overlap for clear graph readability.
+> 2. Implementation of "infinite" navigation with Pan & Zoom support.
+> 3. Global statistical analysis that compares the number of steps required to reach the cycle and tracks the discovery of new nodes in the graph.
+
+Running the simulation, you'll observe how numbers naturally converge toward the central cycle. The structure expands like an inverted binary tree, where each number acts as a "root" for its predecessors, revealing a deep and geometrically elegant order behind what initially appears to be chaotic computation.
+
+___
+
+#### *The Kaprekar Constant (6174)*
+
+Take any 4-digit number (as long as not all digits are the same). Sort its digits in descending order to form the largest possible number, and in ascending order to form the smallest. Subtract the smaller from the larger and repeat the process.
+
+> [!IMPORTANT]
+> 1. Choose a 4-digit number (e.g., 3524).
+> 2. Sort its digits in descending order (5432) and ascending order (2345).
+> 3. Subtract the smaller number from the larger one (5432 - 2345 = 3087).
+> 4. Repeat the operation with the result until you reach the number 6174.
+
+> [!NOTE]
+> Any 4-digit number (with at least two different digits) will reach the constant 6174 in at most 7 iterations. Once 6174 is reached, the operation becomes a mathematical "black hole": 7641 - 1467 = 6174. The cycle feeds itself infinitely.
+
+> [!TIP]
+> The program implements an interactive visualizer for this routine:
+> 1. Enter a starting number to see its animated path backwards towards 6174.
+> 2. The graph expands dynamically using a physics engine (repulsion/attraction) to prevent overlapping between nodes.
+> 3. You can explore the infinite graph using Pan (mouse drag) and Zoom (mouse wheel).
+> 4. The "Range Analysis" section calculates and plots the required steps and the maximum peak reached for any given range of numbers.
+
+Running the program and entering different starting numbers, you'll notice that all paths inevitably converge towards the central red node (6174). The statistical analysis also reveals that most numbers require between 3 and 5 steps, creating a fascinating "waterfall" pattern in the maximum peaks graph. This visually demonstrates how a seemingly simple arithmetic operation generates a highly ordered and deterministic mathematical structure.
 
 ___
 

@@ -1,4 +1,4 @@
-# MATH RIDDLES & PARADOX
+# MATH RIDDLES & PARADOXES
 
 > [!NOTE]
 > 🇬🇧 **English Version Available**: [Read the English version here](./README.en.md).
@@ -81,6 +81,30 @@ La congettura di Collatz, nota anche come il problema $3n + 1$, è uno dei probl
 > 3. Analisi statistica globale che confronta il numero di step necessari per raggiungere il ciclo e la scoperta di nuovi nodi nel grafo.
 
 Eseguendo la simulazione, potrai osservare come i numeri convergano naturalmente verso il ciclo centrale. La struttura si espande come un albero binario inverso, dove ogni numero funge da "radice" per i propri predecessori, rivelando un ordine profondo e geometricamente elegante dietro quello che inizialmente appare come un calcolo caotico.
+
+___
+
+#### *La Costante di Kaprekar (6174)*
+
+Prendi un qualsiasi numero di 4 cifre (purché non abbia tutte le cifre uguali). Riordinane le cifre in modo decrescente per formare il numero più grande possibile, e in modo crescente per formare il più piccolo. Sottrai il minore dal maggiore e ripeti il processo.
+
+> [!IMPORTANT]
+> 1. Scegli un numero di 4 cifre (es. 3524).
+> 2. Ordina le sue cifre in ordine decrescente (5432) e crescente (2345).
+> 3. Sottrai il numero più piccolo da quello più grande (5432 - 2345 = 3087).
+> 4. Ripeti l'operazione con il risultato fino a raggiungere il numero 6174.
+
+> [!NOTE]
+> Qualsiasi numero di 4 cifre (con almeno due cifre diverse) raggiungerà la costante 6174 in al massimo 7 iterazioni. Una volta raggiunto 6174, l'operazione diventa un "buco nero" matematico: 7641 - 1467 = 6174. Il ciclo si auto-alimenta all'infinito.
+
+> [!TIP]
+> Il programma implementa un visualizzatore interattivo di questa routine:
+> 1. Inserisci un numero di partenza per vedere il suo percorso animato a ritroso verso il 6174.
+> 2. Il grafo si espande dinamicamente usando un motore fisico (repulsione/attrazione) per evitare sovrapposizioni tra i nodi.
+> 3. Puoi esplorare il grafo infinito usando il Pan (trascinamento del mouse) e lo Zoom (rotellina).
+> 4. La sezione "Analisi Range" calcola e plotta i passi necessari e il picco massimo raggiunto per qualsiasi intervallo di numeri.
+
+Eseguendo il programma e inserendo diversi numeri di partenza, noterai che tutti i percorsi convergono inevitabilmente verso il nodo rosso centrale (6174). L'analisi statistica rivela inoltre che la maggior parte dei numeri richiede dai 3 ai 5 passi, creando un affascinante pattern a "cascata" nel grafico dei picchi massimi. Questo dimostra visivamente come un'operazione aritmetica apparentemente semplice generi una struttura matematica altamente ordinata e deterministica.
 
 ___
 
