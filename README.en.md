@@ -3,11 +3,11 @@
 > [!NOTE]
 > 🇮🇹 **Versione Italiana Disponibile**: [Leggi la versione in italiano](./README.md).
 
+## ENG
+
 A small personal repository where I try to uncover the logical meanings behind:
 - apparent random sequences
 - seemingly magical optimizations
-
-## ENG
 
 ___
 
