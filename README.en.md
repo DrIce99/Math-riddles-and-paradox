@@ -38,6 +38,37 @@ This happens because, by following the cycle strategy, each prisoner's success i
 
 ___
 
+### English Version
+
+#### *Bertrand's Box Paradox (Boxes and Cards)*
+
+Bertrand's Box Paradox is a famous conditional probability problem that highlights how human intuition can mislead us when dealing with dependent events. There are two classic versions: the **Three Boxes** paradox and the **Three Cards** paradox.
+
+> [!IMPORTANT]
+> **Boxes Version:**
+> 1. There are three boxes: one with two gold coins (GG), one with two silver coins (SS), and one mixed (GS).
+> 2. Choose a box at random and draw one coin at random.
+> 3. If you draw a gold coin, what is the probability that the other coin in the same box is also gold?
+>
+> **Cards Version:**
+> 1. There are three cards: one red on both sides (RR), one white on both sides (WW), and one mixed (RW).
+> 2. Choose a card at random and observe one side at random.
+> 3. If you see a red face, what is the probability that the other side is also red?
+
+> [!NOTE]
+> Intuition suggests a 50% probability, since it seems only two equally likely possibilities remain. In reality, the correct probability is **2/3 (approximately 66.7%)**. This is because drawing a gold coin (or seeing a red face) is twice as likely if you come from the "double" box/card compared to the mixed one. The paradox arises from confusing the probability of the object with the probability of the observed side.
+
+> [!TIP]
+> The program implements an interactive simulation with animated visualizations for both paradoxes:
+> 1. Graphical interface with smooth animations (Anime.js) for coin extraction and card flipping.
+> 2. Game mechanics: the user draws/observes, makes a prediction, and sees the result with immediate feedback.
+> 3. Integrated terminal displaying results from 100,000 automatic simulations, statistically confirming the 66.7% probability.
+> 4. Dynamic removal of "incompatible" elements to clearly visualize the conditioned sample space.
+
+Running the program and playing manually, you'll notice that guessing correctly requires "trusting" statistics over intuition. The automatic simulation in the terminal confirms that, over 100,000 trials, the conditional probability steadily converges toward 2/3, visually demonstrating how Bertrand's Paradox challenges our natural expectations about probability.
+
+___
+
 #### *The Birthday Paradox*
 
 The birthday paradox demonstrates how counterintuitive probability can be when applied to large numbers. It is based on the question: how many people must be in a room for there to be at least a 50% chance that two of them share the same birthday?

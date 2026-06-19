@@ -38,6 +38,35 @@ Questo accade perché, seguendo la strategia dei cicli, il successo di ogni prig
 
 ___
 
+#### *Paradosso di Bertrand (Scatole e Carte)*
+
+Il paradosso di Bertrand è un celebre problema di probabilità condizionale che mette in luce come l'intuizione umana possa ingannarci di fronte a eventi dipendenti. Esistono due versioni classiche: quella delle **Tre Scatole** e quella delle **Tre Carte**.
+
+> [!IMPORTANT]
+> **Versione Scatole:**
+> 1. Ci sono tre scatole: una con due monete d'oro (OO), una con due d'argento (AA), e una mista (OA).
+> 2. Scegli una scatola a caso ed estrai una moneta a caso.
+> 3. Se estrai una moneta d'oro, qual è la probabilità che l'altra moneta nella stessa scatola sia anch'essa d'oro?
+>
+> **Versione Carte:**
+> 1. Ci sono tre carte: una rossa su entrambi i lati (RR), una bianca su entrambi i lati (BB), e una mista (RB).
+> 2. Scegli una carta a caso e osservi una faccia a caso.
+> 3. Se vedi una faccia rossa, qual è la probabilità che l'altra faccia sia anch'essa rossa?
+
+> [!NOTE]
+> L'intuizione suggerirebbe una probabilità del 50%, poiché sembra che restino solo due possibilità equiprobabili. In realtà, la probabilità corretta è **2/3 (circa 66.7%)**. Questo perché estrarre un oro (o vedere un rosso) è due volte più probabile se provieni dalla scatola/carta "doppia" rispetto a quella mista. Il paradosso nasce dal confondere la probabilità dell'oggetto con la probabilità del lato osservato.
+
+> [!TIP]
+> Il programma implementa una simulazione interattiva con visualizzazioni animate per entrambi i paradossi:
+> 1. Interfaccia grafica con animazioni fluide (Anime.js) per l'estrazione di monete e il ribaltamento delle carte.
+> 2. Meccanica di gioco: l'utente estrae/osserva, fa una previsione, e vede il risultato con feedback immediato.
+> 3. Terminale integrato che mostra i risultati di 100.000 simulazioni automatiche, confermando statisticamente il 66.7%.
+> 4. Rimozione dinamica degli elementi "incompatibili" per visualizzare chiaramente lo spazio campionario condizionato.
+
+Eseguendo il programma e giocando manualmente, noterai che indovinare correttamente richiede di "fidarsi" della statistica contro l'intuizione. La simulazione automatica nel terminale conferma che, su 100.000 prove, la probabilità condizionale converge stabilmente verso 2/3, dimostrando visivamente come il paradosso di Bertrand sfidi le nostre aspettative naturali sulla probabilità.
+
+___
+
 #### *Il paradosso del compleanno*
 
 Il paradosso del compleanno dimostra quanto sia controintuitiva la probabilità quando applicata a grandi numeri. Si basa sulla domanda: quante persone devono essere presenti in una stanza affinché ci sia almeno il 50% di probabilità che due di loro festeggino il compleanno lo stesso giorno?
