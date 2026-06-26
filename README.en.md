@@ -247,4 +247,6 @@ The Recamán sequence is a famous mathematical sequence defined by a seemingly s
 
 Running the program, you'll watch the sequence expand like a self-organizing wave. Visual beauty emerges from the alternation between "bold" subtractions (when a backward jump is possible) and "fallback" additions (when the number is already used). The ability to zoom and pan freely reveals hidden details: local patterns, temporary symmetries, and the variable density of numbers along the axis, transforming a simple arithmetic rule into a hypnotic visual experience.
 
+<img width="1493" height="873" alt="image" src="https://github.com/user-attachments/assets/2dd37e88-5f37-4e59-9b27-8a643c393001" />
+
 ___
