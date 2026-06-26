@@ -225,3 +225,27 @@ Questo fenomeno riflette le proprietà intrinseche della distribuzione dei numer
 
 (Guardate solo il log da terminale. Non guardate il grafico, è orrendo.)
 ___
+
+#### *La Sequenza di Recamán*
+
+La sequenza di Recamán è una famosa successione matematica definita da una regola apparentemente semplice ma che genera strutture visive straordinariamente complesse e affascinanti. Partendo da zero, ogni passo segue una logica di "salto" condizionata.
+
+> [!IMPORTANT]
+> 1. La sequenza inizia sempre da 0.
+> 2. Al passo $n$, prova a sottrarre $n$ dall'ultimo valore: $a(n) = a(n-1) - n$.
+> 3. Se il risultato è positivo e non è mai apparso prima nella sequenza, accettalo.
+> 4. Altrimenti, somma invece: $a(n) = a(n-1) + n$.
+
+> [!NOTE]
+> Nonostante la semplicità deterministica della regola, la sequenza produce un pattern caotico e imprevedibile. Gli archi si intrecciano creando una struttura che ricorda un "arcobaleno frattale", con zone dense e regioni vuote. Non è ancora noto se ogni numero naturale apparirà almeno una volta nella sequenza: questa è una delle domande aperte legate a Recamán.
+
+> [!TIP]
+> Il programma implementa un visualizzatore grafico stile Numberphile con navigazione infinita:
+> 1. Gli archi vengono disegnati alternativamente sopra e sotto l'asse centrale per evitare sovrapposizioni visive.
+> 2. Colorazione dinamica arcobaleno: ogni passo riceve una tonalità HSV unica basata sul suo indice.
+> 3. Supporto completo a Pan (trascinamento mouse) e Zoom (rotellina) per esplorare i dettagli della struttura.
+> 4. Spessore delle linee adattivo: gli archi più grandi appaiono più sottili per mantenere la leggibilità.
+
+Eseguendo il programma, osserverai la sequenza espandersi come un'onda che si auto-organizza. La bellezza visiva emerge dall'alternanza tra sottrazioni "audaci" (quando il salto all'indietro è possibile) e addizioni "di ripiego" (quando il numero è già stato usato). La possibilità di zoomare e spostarsi liberamente rivela dettagli nascosti: pattern locali, simmetrie temporanee e la densità variabile dei numeri lungo l'asse, trasformando una semplice regola aritmetica in un'esperienza visiva ipnotica.
+
+___

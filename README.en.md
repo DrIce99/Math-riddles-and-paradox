@@ -222,24 +222,29 @@ Twin primes are pairs of prime numbers that differ by exactly 2 (such as $3$ and
 By running the simulation on a sufficiently large dataset, you will visually notice that the distribution of distances is not purely chaotic, but tends to cluster around multiples of 6.
 
 This phenomenon reflects the intrinsic properties of prime number distribution within arithmetic progression: since all prime numbers greater than 3 must necessarily be of the form $6k \pm 1$, the spacing dynamics between twin pairs are heavily influenced by this fundamental structural rigidity in number theory.
+
 ___
 
-#### *Collatz Conjecture*
+#### *The Recamán Sequence*
 
-The Collatz conjecture, also known as the $3n + 1$ problem, is one of the most famous unsolved problems in mathematics. It applies to any positive integer $n$ and follows a very simple transformation rule:
+The Recamán sequence is a famous mathematical sequence defined by a seemingly simple rule that generates extraordinarily complex and fascinating visual structures. Starting from zero, each step follows a conditional "jump" logic.
 
 > [!IMPORTANT]
-> 1. If the number is even, divide it by 2 ($n / 2$).
-> 2. If the number is odd, multiply it by 3 and add 1 ($3n + 1$).
-> 3. Repeat the process with the resulting value.
+> 1. The sequence always starts at 0.
+> 2. At step $n$, try to subtract $n$ from the last value: $a(n) = a(n-1) - n$.
+> 3. If the result is positive and has never appeared before in the sequence, accept it.
+> 4. Otherwise, add instead: $a(n) = a(n-1) + n$.
 
 > [!NOTE]
-> The conjecture states that regardless of which starting number is chosen, the sequence will always reach the $4 \to 2 \to 1$ cycle. Despite the simplicity of the rule, no one has yet managed to mathematically prove that this happens for *every* existing number.
+> Despite the deterministic simplicity of the rule, the sequence produces a chaotic and unpredictable pattern. The arcs intertwine creating a structure resembling a "fractal rainbow," with dense zones and empty regions. It is still unknown whether every natural number will appear at least once in the sequence: this is one of the open questions related to Recamán.
 
 > [!TIP]
-> The program implements a dynamic graphical visualizer that allows exploring the tree-like structure of the conjecture:
-> 1. Planar visualization that avoids overlapping branches for a clear reading of the graph.
-> 2. Implementation of an "infinite" navigation with Pan & Zoom support.
-> 3. Global statistical analysis comparing the number of steps required to reach the cycle and the discovery of new nodes in the graph.
+> The program implements a Numberphile-style graph visualizer with infinite navigation:
+> 1. Arcs are drawn alternately above and below the central axis to prevent visual overlap.
+> 2. Dynamic rainbow coloring: each step receives a unique HSV hue based on its index.
+> 3. Full Pan (mouse drag) and Zoom (mouse wheel) support to explore structural details.
+> 4. Adaptive line thickness: larger arcs appear thinner to maintain readability.
 
-By running the simulation, you can observe how numbers naturally converge toward the central cycle. The structure expands like an inverted binary tree, where each number acts as a "root" for its predecessors, revealing a deep and geometrically elegant order behind what initially appears to be a chaotic computation.
+Running the program, you'll watch the sequence expand like a self-organizing wave. Visual beauty emerges from the alternation between "bold" subtractions (when a backward jump is possible) and "fallback" additions (when the number is already used). The ability to zoom and pan freely reveals hidden details: local patterns, temporary symmetries, and the variable density of numbers along the axis, transforming a simple arithmetic rule into a hypnotic visual experience.
+
+___
