@@ -248,4 +248,6 @@ La sequenza di Recamán è una famosa successione matematica definita da una reg
 
 Eseguendo il programma, osserverai la sequenza espandersi come un'onda che si auto-organizza. La bellezza visiva emerge dall'alternanza tra sottrazioni "audaci" (quando il salto all'indietro è possibile) e addizioni "di ripiego" (quando il numero è già stato usato). La possibilità di zoomare e spostarsi liberamente rivela dettagli nascosti: pattern locali, simmetrie temporanee e la densità variabile dei numeri lungo l'asse, trasformando una semplice regola aritmetica in un'esperienza visiva ipnotica.
 
+<img width="1493" height="873" alt="image" src="https://github.com/user-attachments/assets/2dd37e88-5f37-4e59-9b27-8a643c393001" />
+
 ___
