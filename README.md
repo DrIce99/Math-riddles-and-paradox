@@ -173,6 +173,32 @@ Questo accade perché la scelta iniziale del giocatore ha 1 probabilità su 3 di
 
 ___
 
+#### *L'Ecosistema dei Niven Numbers*
+
+I Niven numbers (o numeri di Harshad) sono interi divisibili per la somma delle loro cifre. Apparentemente semplici, nascondono una struttura genealogica complessa: ogni Niven può essere visto come il "capostipite" di una linea temporale di multipli, che si estende finché tutti i multipli rimangono Niven. Questo approccio trasforma lo studio della densità in un'analisi evolutiva.
+
+> [!IMPORTANT]
+> 1. Un numero $n$ è Niven se $n \mod S(n) = 0$, dove $S(n)$ è la somma delle cifre di $n$.
+> 2. Un Niven è **primitivo** (rispetto a $\geq 10$) se non è multiplo di alcun Niven primitivo precedente.
+> 3. Ogni Niven primitivo genera una "linea temporale": la sequenza $2n, 3n, 4n, \ldots$ finché tutti i multipli rimangono Niven.
+> 4. Il **punto di rottura** è il primo multiplo $k \cdot n$ che non è Niven, dove la linea si interrompe definitivamente.
+
+> [!NOTE]
+> L'ecosistema mostra due fenomeni distinti ma correlati: la nascita di nuove linee (ogni Niven primitivo crea una nuova linea temporale) e la sopravvivenza delle linee esistenti (che continuano finché i multipli rimangono Niven). È possibile che le linee diventino sempre più corte mentre contemporaneamente i Niven numbers diventano più frequenti: non c'è contraddizione, perché la densità cumulativa dipende dalla sovrapposizione di tutte le linee, non dalla loro lunghezza individuale.
+
+> [!TIP]
+> Il programma implementa un analizzatore completo con visualizzazione multi-assiale:
+> 1. **Tabella booleana precalcolata**: tutti i Niven fino a `max_range` vengono calcolati una sola volta, evitando milioni di chiamate ripetute a `is_niven()`.
+> 2. **Quattro metriche simultanee**: totale Niven primitivi (linee nate), linee attive (sopravvissute), densità locale (finestra scorrevole), rapporto Niven/linee attive.
+> 3. **Doppio asse Y**: conteggi assoluti a sinistra, percentuali e rapporti a destra, per confrontare grandezze eterogenee.
+> 4. **Densità locale invece di cumulativa**: una finestra scorrevole di 1000 numeri evita che la media cumulativa "appiattisca" le fluttuazioni locali.
+
+Eseguendo il programma, osserverai l'ecosistema evolversi in tempo reale. La curva blu (Niven primitivi) cresce rapidamente all'inizio poi rallenta, mentre la curva verde (linee attive) mostra un declino più marcato: molte linee nascono ma poche sopravvivono a lungo. La densità locale (rosso) rivela fluttuazioni periodiche legate alla struttura decimale, mentre il rapporto Niven/linee attive (arancione) misura l'efficienza dell'ecosistema: se cresce, ogni linea sopravvissuta "copre" più numeri grazie alla sovrapposizione dei multipli; se cala, le linee muoiono senza essere adeguatamente sostituite. Questa visione multi-livello trasforma un semplice conteggio in un'analisi dinamica della struttura profonda dei Niven numbers.
+
+> [!CAUTION] Purtroppo, non sono riuscito a trovare alcuna logica dietro questo.
+
+___
+
 #### *Il gioco di Penney*
 
 Due giocatori si sfidano lanciando una moneta equa. Ciascun giocatore sceglie una sequenza di tre risultati (Testa o Croce). La moneta viene lanciata ripetutamente fino a quando una delle due sequenze non appare.

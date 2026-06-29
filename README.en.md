@@ -176,6 +176,32 @@ This happens because the player's initial choice has a 1 in 3 chance of being co
 
 ___
 
+#### *The Niven Numbers Ecosystem*
+
+Niven numbers (or Harshad numbers) are integers divisible by the sum of their digits. Seemingly simple, they hide a complex genealogical structure: each Niven can be seen as the "progenitor" of a timeline of multiples, extending as long as all multiples remain Niven. This approach transforms density studies into evolutionary analysis.
+
+> [!IMPORTANT]
+> 1. A number $n$ is Niven if $n \mod S(n) = 0$, where $S(n)$ is the sum of digits of $n$.
+> 2. A Niven is **primitive** (with respect to $\geq 10$) if it is not a multiple of any previous primitive Niven.
+> 3. Each primitive Niven generates a "timeline": the sequence $2n, 3n, 4n, \ldots$ as long as all multiples remain Niven.
+> 4. The **breaking point** is the first multiple $k \cdot n$ that is not Niven, where the line definitively breaks.
+
+> [!NOTE]
+> The ecosystem shows two distinct but correlated phenomena: the birth of new lines (each primitive Niven creates a new timeline) and the survival of existing lines (which continue as long as multiples remain Niven). It's possible for lines to become shorter while Niven numbers simultaneously become more frequent: there's no contradiction, because cumulative density depends on the overlap of all lines, not their individual length.
+
+> [!TIP]
+> The program implements a complete analyzer with multi-axis visualization:
+> 1. **Precalculated boolean table**: all Niven up to `max_range` are computed only once, avoiding millions of repeated calls to `is_niven()`.
+> 2. **Four simultaneous metrics**: total primitive Niven (lines born), active lines (survived), local density (sliding window), Niven/active lines ratio.
+> 3. **Dual Y-axis**: absolute counts on the left, percentages and ratios on the right, to compare heterogeneous quantities.
+> 4. **Local density instead of cumulative**: a sliding window of 1000 numbers prevents cumulative averaging from "flattening" local fluctuations.
+
+Running the program, you'll watch the ecosystem evolve in real time. The blue curve (primitive Niven) grows rapidly at first then slows, while the green curve (active lines) shows a steeper decline: many lines are born but few survive long. Local density (red) reveals periodic fluctuations tied to decimal structure, while the Niven/active lines ratio (orange) measures ecosystem efficiency: if it grows, each surviving line "covers" more numbers through multiple overlap; if it falls, lines die without being adequately replaced. This multi-level view transforms a simple count into a dynamic analysis of the deep structure of Niven numbers.
+
+> [!CAUTION] Unfortunately, I couldn't find any logic behind this mathematical "sequence".
+
+___
+
 #### *Penney's Game*
 
 Two players compete by flipping a fair coin. Each player chooses a sequence of three outcomes (Heads or Tails). The coin is flipped repeatedly until one of the two sequences appears.
